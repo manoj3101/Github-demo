@@ -2,19 +2,7 @@ const readCucumberReport = require('./ReadJson');
 const fs = require('fs');
 const ejs = require('ejs');
 
-let passCount = 0;
-let failCount = 0;
-let skipCount = 0;
-let failedTestCases = [];
-let passedTestCases = [];
-let skippedTestCases = [];
 
-let startDateAndTime;
-let endDateAndTime;
-let totalTimeInMinutes;
-let testType = "Not Mentioned";
-let browserName = "Chrome as Default";
-let url = "Not Mentioned";
 
 function generateHTMLReport() {
     readCucumberReport.readCucumberReport((err, data, ) => {
